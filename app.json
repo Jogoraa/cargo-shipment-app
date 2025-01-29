@@ -32,7 +32,18 @@
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
-      ]
+      ],
+      [
+        "expo-router",
+        {
+          "origin": "https://uber.dev/"
+        }
+      ],
+      "expo-font",
+      "expo-secure-store"
+    ],
+    "assetBundlePatterns": [
+      "assets/fonts/*"
     ],
     "experiments": {
       "typedRoutes": true
