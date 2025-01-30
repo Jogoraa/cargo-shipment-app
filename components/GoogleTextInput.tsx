@@ -53,9 +53,13 @@ const GoogleTextInput = ({
           },
         }}
         onPress={(data, details = null) => {
+          if (!details || !details.geometry || !details.geometry.location) {
+            console.error("Invalid place details");
+            return;
+          }
           handlePress({
-            latitude: details?.geometry.location.lat!,
-            longitude: details?.geometry.location.lng!,
+            latitude: details.geometry.location.lat,
+            longitude: details.geometry.location.lng,
             address: data.description,
           });
         }}
@@ -69,12 +73,15 @@ const GoogleTextInput = ({
               source={icon ? icon : icons.search}
               className="w-6 h-6"
               resizeMode="contain"
+              accessibilityLabel="Search icon"
             />
           </View>
         )}
         textInputProps={{
           placeholderTextColor: "gray",
           placeholder: initialLocation ?? "Where do you want to go?",
+          accessible: true,
+          accessibilityLabel: "Search for a location",
         }}
       />
     </View>

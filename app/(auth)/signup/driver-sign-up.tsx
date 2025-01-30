@@ -62,7 +62,7 @@ export default function DriverSignUp() {
   };
 
   const handleSubmit = () => {
-    router.push("/(driver)/dashboard");
+    router.push("/(driver)/(tabs)/home");
 
     if (validateForm()) {
       Alert.alert("Success", "Driver registration submitted successfully!");

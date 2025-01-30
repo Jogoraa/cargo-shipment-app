@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ActivityIndicator, Text, View } from "react-native";
-import MapView, { Marker, PROVIDER_DEFAULT } from "react-native-maps";
+import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 import MapViewDirections from "react-native-maps-directions";
 
 import { icons } from "@/constants";
@@ -82,16 +82,14 @@ const Map = () => {
 
   return (
     <MapView
-      provider={PROVIDER_DEFAULT}
-      className="w-full h-full rounded-2xl"
-      tintColor="black"
-      mapType="standard"
-      showsPointsOfInterest={false}
+      provider={PROVIDER_GOOGLE} // Use Google Maps provider for best appearance
+      style={{ width: "100%", height: "100%" }}
+      mapType="standard" // Ensures clear, normal map display
       initialRegion={region}
       showsUserLocation={true}
-      userInterfaceStyle="light"
+      userInterfaceStyle="light" // Ensures a bright UI
     >
-      {markers.map((marker, index) => (
+      {markers.map((marker) => (
         <Marker
           key={marker.id}
           coordinate={{

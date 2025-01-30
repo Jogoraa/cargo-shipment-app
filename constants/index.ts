@@ -10,7 +10,7 @@ import eyecross from "@/assets/icons/eyecross.png";
 import google from "@/assets/icons/google.png";
 import home from "@/assets/icons/home.png";
 import list from "@/assets/icons/list.png";
-import lock from "@/assets/icons/lock.png";
+import lock from "@/assets/icons/lock.png"; // Ensure this path is correct and the file exists
 import map from "@/assets/icons/map.png";
 import marker from "@/assets/icons/marker.png";
 import out from "@/assets/icons/out.png";
@@ -31,6 +31,12 @@ import onboarding1 from "@/assets/images/onboarding1.png";
 import onboarding2 from "@/assets/images/onboarding2.png";
 import onboarding3 from "@/assets/images/onboarding3.png";
 import signUpCar from "@/assets/images/signup-car.png";
+import report from "@/assets/icons/report.png";
+import dashboard from "@/assets/icons/dashboard.png";
+import bell from "@/assets/icons/bell.png";
+import pkg from "@/assets/icons/pkg.png";
+import noInternet from "@/assets/icons/no-internet.png";
+import avatar from "@/assets/images/avatar.png";
 
 export const images = {
     onboarding1,
@@ -41,6 +47,7 @@ export const images = {
     check,
     noResult,
     message,
+    avatar,
 };
 
 export const icons = {
@@ -69,6 +76,12 @@ export const icons = {
     star,
     target,
     to,
+    report,
+    dashboard,
+    bell,
+    pkg,
+    noInternet,
+    
 };
 
 export const onboarding = [
